@@ -1,0 +1,18 @@
+.under {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.work {
+    background-color: rgb(149, 149, 149);
+    width: 700px;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(178, 178, 178);
+}

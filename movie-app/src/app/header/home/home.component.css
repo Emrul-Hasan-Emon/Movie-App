@@ -1,0 +1,81 @@
+* {
+    color: white;
+    font-weight: bold;
+}
+
+.filter {
+    height: 5vh;
+    background-color: aqua;
+}
+.main {
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.design {
+    background-color: rgb(0, 0, 0);
+    border: 10px solid rgb(62, 62, 62);
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+.design img {
+    margin-top: 20px;
+    height: 300px;
+    object-fit: contain;
+    border-image: 10px;
+}
+
+.movie-name {
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.release {
+   font-size: 20px;
+}
+
+.hover {
+    border-radius: 8px;
+    transform: all 3s;
+    transition: 1s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hover:hover {
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.button {
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    width: 100px;
+    height: 42px;
+    margin-left: 20px;
+    margin-right: 50px;
+    float: right;
+}
+
+.dropdown {
+    margin-top: 10px;
+    margin-left: 60px;
+    align-items: center;
+}
+
+.p-dropdown {
+    margin-right: 20px;
+}

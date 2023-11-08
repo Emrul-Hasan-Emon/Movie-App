@@ -1,0 +1,41 @@
+b {
+    font-size: 30px;
+}
+.main-corner {
+    background-color: white;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.image {
+    margin-left: 10px;
+    margin-right: 30px;
+    width: 700px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-with-border {
+    border-radius: 5px;
+    width: 400px;
+    height: 50vh;
+}
+
+.content {
+    margin-top: 100px;
+    width: 100vw;
+    /* background-color: rgb(111, 126, 69); */
+    font-size: 20px;
+    font-family: system-ui;
+    /* display: flex;
+    flex-direction: column;
+    align-self: normal; */
+}
+
+.other-name {
+    margin-left: 30px;
+}

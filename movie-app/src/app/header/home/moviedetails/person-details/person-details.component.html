@@ -1,0 +1,46 @@
+<div class="main-corner">
+    <div class="image">
+        <img class="image-with-border" [src]=" 'https://image.tmdb.org/t/p/w200/' + singlePersonDetails.profile_path">
+    </div>
+    <div class="content">
+        <div class="name">
+            <b>Name</b>: {{ singlePersonDetails?.name }}
+        </div>
+        
+        <div *ngIf="singlePersonDetails?.also_known_as">
+            <b>Also known as: </b>
+            <div class="other-name" *ngFor="let name of singlePersonDetails?.also_known_as">
+                {{ name }}
+            </div>
+        </div>
+        <div>
+            <b>Profession</b>: {{ singlePersonDetails?.known_for_department }}
+        </div>
+        <div class="birthday">
+            <b>Birthday</b>: {{ singlePersonDetails?.birthday }}
+        </div>
+        <div>
+            <b>Place of Birth</b>: {{ singlePersonDetails?.place_of_birth }}
+        </div>
+        <div class="deathday">
+            <div *ngIf="singlePersonDetails?.deathday">
+                <b>Present Situation</b>: Dead <br>
+                <b>Death Day</b>: {{ singlePersonDetails?.deathday }}
+            </div>
+            <div *ngIf="!singlePersonDetails?.deathday">
+                <b>Present Situation</b>: Alive
+            </div>
+        </div>
+        <div>
+            <div *ngIf="singlePersonDetails?.gender == 2">
+                <b>Gender</b>: Male
+            </div>
+            <div *ngIf="singlePersonDetails?.gender == 1">
+                <b>Gender</b>: Female
+            </div>
+        </div>
+        <div *ngIf="singlePersonDetails?.biography">
+            <b>Biography</b>: {{ singlePersonDetails?.biography}}
+        </div>
+    </div>
+</div>

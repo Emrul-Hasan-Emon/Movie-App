@@ -1,0 +1,39 @@
+<div class="main-corner">
+    <div class="image">
+        <img class="image-with-border" [src]=" 'https://image.tmdb.org/t/p/w200/' + singleMovieDetails?.result1?.poster_path ">
+    </div>
+    <div class="content">
+        <div class="movie-title">
+            <b>Name</b>: {{ singleMovieDetails?.result1?.original_title }}
+        </div>
+        <div class="movie-language">
+            <b>Language</b>: {{ singleMovieDetails?.result1?.spoken_languages[0].english_name}}
+        </div>
+        <div class="runtime">
+            <b>Duration</b>: {{ singleMovieDetails?.result1?.runtime }} minutes
+        </div>
+        <div class="status">
+            <b>Status</b>: {{ singleMovieDetails?.result1?.status }}
+        </div>
+        <div class="release-date">
+            <b>Release Date</b>: {{ singleMovieDetails?.result1?.release_date }}
+        </div>
+        <div class="genres">
+            <b>Movie Type</b>: 
+            <div class="horror" *ngFor="let movietype of singleMovieDetails?.result1?.genres">
+                {{ movietype.name }}
+            </div>
+        </div>
+        <div class="review">
+            <b>Overview</b>: {{ singleMovieDetails?.result1?.overview }}
+        </div>
+        <b>Cast:</b> <br>
+        <div class="cast" *ngFor="let imagesource of singleMovieDetails?.result2?.cast">
+            <a (click)="navigateToPersonPage(imagesource.id)">
+                <div class="cast-div">
+                        <img class="cast-image" [src]="'https://image.tmdb.org/t/p/w200/' + imagesource.profile_path">
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

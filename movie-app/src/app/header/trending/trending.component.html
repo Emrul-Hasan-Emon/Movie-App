@@ -1,0 +1,25 @@
+<div class="trend-main">
+    <div class="first">
+        <h3 class="heading">Trending Movies</h3>
+    </div>
+    <div class="second">
+        <div class="main">
+            <div class="design hover" *ngFor="let movies of movies">
+                <a (click)="navigateToMovieDetails(movies.id)">
+                    <div>
+                        <img [src]="'https://image.tmdb.org/t/p/w200'+movies.poster_path">
+                    </div>
+                    <div class="movie-name">
+                        {{ movies.title }}
+                    </div>
+                    <div class="release">
+                        Released Date: {{ movies.release_date }}
+                    </div>
+                    <div>
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

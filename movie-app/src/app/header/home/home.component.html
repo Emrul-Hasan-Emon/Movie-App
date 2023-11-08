@@ -1,0 +1,44 @@
+<div class="main-corner">
+    <div class="card flex justify-content-center" class="dropdown">
+        <p-dropdown 
+            class="p-dropdown"
+            [options]="suggestedMovieType" 
+            [(ngModel)]="selectMovieType" 
+            optionLabel="name" 
+        ></p-dropdown>
+        
+        <p-dropdown 
+            class="p-dropdown"
+            [options]="suggestedCertificationType" 
+            [(ngModel)]="selectCertificationType" 
+            optionLabel="certification"
+        ></p-dropdown>
+        
+        <p-dropdown 
+            class="p-dropdown"
+            [options]="suggestedSortType" 
+            [(ngModel)]="selectSortType" 
+            optionLabel="title" 
+        ></p-dropdown>
+        <button class="button" (click)="filterButtonClicked()">Filter</button>
+        <button class="button" (click)="clearButtonClicked()">Clear</button>
+    </div>
+    <div class="main">
+        <div class="design hover" *ngFor="let movies of movies; let i = index">
+            <a (click)="navigateToMovieDetails(movies.id)">
+                <div>
+                    <img [src]="'https://image.tmdb.org/t/p/w200'+movies.poster_path">
+                </div>
+                <div class="movie-name">
+                    {{ movies.title }}
+                </div>
+                <div class="release">
+                    Released Date: {{ movies.release_date }}
+                </div>
+                <div>
+                    
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

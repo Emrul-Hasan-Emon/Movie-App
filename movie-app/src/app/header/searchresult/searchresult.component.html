@@ -1,0 +1,18 @@
+<div class="main">
+    <div class="design hover" *ngFor="let movies of totalMovieList; let i = index">
+        <a (click)="navigateToMovieDetails(movies.id)">
+            <div>
+                <img [src]="'https://image.tmdb.org/t/p/w200'+movies.poster_path">
+            </div>
+            <div class="movie-name">
+                {{ movies.title }}
+            </div>
+            <div class="release">
+                Released Date: {{ movies.release_date }}
+            </div>
+            <div>
+                
+            </div>
+        </a>
+    </div>
+</div>

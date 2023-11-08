@@ -1,0 +1,32 @@
+<header class="header">
+    <nav class="container">
+        <a routerLink="/home">
+            <div class="first">
+                <div class="movie">Movie</div>
+                <div class="discover">Discover</div>
+                <div class="app">App</div>
+            </div>
+        </a>
+        <div class="second">
+            <div class="home hover"><a routerLink="/home">Home</a></div>
+            <div class="trend hover"><a routerLink="/trending">Trending</a></div>
+            <div class="about hover"><a routerLink="/underwork">About Us</a></div>
+            <div class="contact hover"><a routerLink="/underwork">Contact Us</a></div>
+        </div>
+        <div class="third">
+            <div>
+                <p-autoComplete
+                    [(ngModel)]="searchText" 
+                    [suggestions]="suggestedmovieList" 
+                    (completeMethod)="search($event)"
+                    (onSelect)="onSelect($event)"
+                    field="original_title"
+                    [delay]="2000"
+                ></p-autoComplete>
+            </div>
+            <div>
+                <button class="w3-xxxlarge fa fa-search button" (click)="searchButtonClicked($event)"></button>
+            </div>
+        </div>
+    </nav>
+</header>
